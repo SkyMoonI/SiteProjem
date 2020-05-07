@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="css/main.css"/>
+      <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+      
+        <style>
+        
+
+        div.polaroid {
+          width: 80%;
+          background-color: white;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          margin-bottom: 25px;
+        }
+
+        div.container {
+          text-align: center;
+          padding: 10px 20px;
+        }
+        </style>
+      <title>SkyMoon Website</title>
+      
+      <script type="text/javascript">
+           function abCepTelefon(tel) 
+          {
+                var parcalanmisTel = tel.split("");
+                if (!/[^+].[^0-9]/.test(tel)) {
+                    if (parcalanmisTel[0] == "+" && tel.length == 13)
+                        return true;
+                    else if (parcalanmisTel[0] != "+" &&
+                        (tel.length == 10 || tel.length == 11))
+                        return true;
+                    else
+                        return false;
+                } else
+                    return false;
+            }
+          
+            
+          function islem(frm)
+            {
+                var email = frm.email.value;
+                var atpos=email.indexOf("@");
+                var dotpos=email.lastIndexOf(".");
+                
+            if(document.getElementById("inputName4").value=="")
+                {
+                alert("Ad boş!");return false;
+                }
+            else if(document.getElementById("inputSurname4").value=="")
+                {
+                alert("Soyad boş!");return false;
+                }
+            else if(document.getElementById("inputEmail4").value=="")
+                {                 
+                alert("Email boş!");return false;
+                }
+                
+            else if(  atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
+                {
+                    alert("Email Adresini Doğru Giriniz!");return false;
+                }
+            else if(document.getElementById("inputPhone4").value=="")
+                {
+                    alert("Telefon boş!");return false;
+                }
+
+            else if (abCepTelefon(document.getElementById("inputPhone4").value)==false)
+                {
+                    alert("Telefon Yerine Belirtildiği Gibi Giriniz!");return false;
+                }
+                
+             else if(document.getElementById("cinsiyet1").checked==false && document.getElementById("cinsiyet2").checked==false && document.getElementById("cinsiyet3").checked==false)
+                {
+                    alert("Cinsiyet boş!");return false;
+                }
+
+            else if(document.getElementById("amac1").checked==false && document.getElementById("amac2").checked==false && document.getElementById("amac3").checked==false && document.getElementById("amac4").checked==false)
+                {
+                     alert("Amaç boş!");return false;
+                }
+            else if(document.getElementById("aciliyet1").checked==false && document.getElementById("aciliyet2").checked==false && document.getElementById("aciliyet3").checked==false)
+                {
+                     alert("Aciliyet boş!");return false;
+                } 
+            else if(document.getElementById("aciklama").value=="")
+                {
+                    alert("Mesaj Giriniz!");return false;
+                }    
+            else
+                {
+                    return true;
+                }
+            
+            }
+
+        </script>
+  </head>
+  <body>  
+      <section id="cover">
+          <div class="container">
+              <div class="row">
+                  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="SkyMoon Website"/></a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">           
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Hakkımda<span class="sr-only">(current)</span></a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ozgecmis.html">Özgeçmiş</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Sehrim.html">Şehrim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Mirasimiz.html">Mirasımız</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Giris.html">Giriş</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Iletisim.html">İletişim</a>
+                            </li>               
+                        </ul>
+                      </div>
+                  </nav>
+              </div>
+              
+          </div>
+          <div id="elisi-cont" class="container polaroid" style="margin-top:  150px; ">
+              <div >
+                <form name="form" action="iletisim.php" method="POST" onsubmit="return islem(this);">
+                <div class="form-row">
+                    <div class="form-group col-sm-4">
+                      <label for="inputName4">Ad</label>
+                      <input type="text" autofocus name="ad" class="form-control" id="inputName4">
+                    </div>
+                    <div class="form-group col-sm-4">
+                      <label for="inputSurname4">Soyad</label>
+                      <input type="text" class="form-control" name="soyad" id="inputSurname4">
+                    </div>
+                    <div class="form-group col-sm-4">
+                    <label for="sehir">Yaşadığınız şehir</label><br>
+                    <select name="sehirler" id="sehir" class="form-control">
+                        <option value="İstanbul">İstanbul</option>
+                        <option value="Sakarya">Sakarya</option>
+                        <option value="Kocaeli">Tokat</option>
+                        <option value="Bursa">İzmir</option>
+                        <option value="Bursa">Diğer</option>
+                    </select>
+                </div>
+                 </div>    
+              <div class="form-row">
+                <div class="form-group col-sm-6">
+                  <label for="inputEmail4">Email</label>
+                  <input name="email" placeholder="Örneğin: abc123@outlook.com" class="form-control" id="inputEmail4">
+                </div>
+                <div class="form-group col-sm-6">
+                  <label for="inputPhone4">Telefon</label>
+                  <input type="text" name="telefon" placeholder="Örneğin: 05355353535" class="form-control" id="inputPhone4">  
+                </div>
+              </div> 
+                    
+              <div class="form-row">
+                  <div class="form-group col-sm-2">
+                      <div class="form-check">
+                            <p>Cinsiyetiniz</p>
+                         <h5 style="font-size: 15px;">Erkek</h5><input type="radio" name="Cinsiyet" id="cinsiyet1" value="1">
+                         <h5 style="font-size: 15px;">Kadın</h5><input type="radio" name="Cinsiyet" id="cinsiyet2" value="2">
+                         <h5 style="font-size: 15px;">Diğer</h5><input type="radio" name="Cinsiyet" id="cinsiyet3" value="3">
+                  
+                      </div>
+                  </div>
+                <div class="form-group col-sm-3">
+                      <div class="form-check">
+                            <p>Mesajı Gönderme Amacınız<br></p>
+                            <h5 style="font-size: 15px;">Site hakkında Tavsiye</h5><input type="checkbox" name="Amac[]" id="amac1" value="Site Hakkında Tavsiye">
+                            <h5 style="font-size: 15px;">İş</h5><input type="checkbox" name="Amac[]" id="amac2" value="İş">
+                            <h5 style="font-size: 15px;">Kişisel Soru</h5><input type="checkbox" name="Amac[]" id="amac3" value="Kişisel Soru">
+                            <h5 style="font-size: 15px;">Diğer</h5><input type="checkbox" name="Amac[]" id="amac4" value="Diğer">
+                      </div>
+                  </div>
+                <div class="form-group col-sm-3">
+                      <div class="form-check">
+                         <p>Mesajın acelesi<br></p>
+                         <h5 style="font-size: 15px;">Çok acil</h5>  <input type="radio" name="aciliyet" id="aciliyet1" value="1">
+                         <h5 style="font-size: 15px;">Acil</h5>      <input type="radio" name="aciliyet" id="aciliyet2" value="2">
+                         <h5 style="font-size: 15px;">Acil değil</h5><input type="radio" name="aciliyet" id="aciliyet3" value="3">
+                  
+                      </div>
+                  </div>     
+              </div>
+                <div class="form-row">
+                  <div class="form-group col-sm-6">
+                        <h5 style="font-size: 15px;">Mesajınız</h5><br>
+                        <textarea rows="4" cols="40" name="aciklama" id="aciklama"></textarea>
+
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <br><br><br><br><b>Çoklu Dosya Yükleme: <input type="file" multiple name="orn_file"></b>
+                    </div>
+                 </div>
+                        
+                        
+                    
+                   
+              <button type="reset" class="btn btn-primary" value="Temizle">Temizle</button>
+              <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+              </div>
+              
+          </div>
+          
+          
+      </section>
+      <script src="js/jQuery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
+  </body>
+</html>
