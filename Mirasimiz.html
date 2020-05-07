@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css"/>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="css/main.css"/>
+      <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,400i" rel="stylesheet">
+      <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/3e983ce703.js" crossorigin="anonymous"></script>
+      <style>
+          
+        .tab-content
+          {
+              display: none;
+          }
+        #tab1
+          {
+              display: block;
+          }
+        .current a
+          {
+              background-color: darkgrey !important;
+              color: aliceblue !important;
+              border: 1px solid #666 !important;
+          }
+          #videoBG
+        {
+            background-color: black;
+            position: fixed;
+            z-index: -1;
+
+        }
+        @media (min-aspect-ratio: 16/9)
+        {
+            #videoBG
+            {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @media (max-aspect-ratio: 16/9)
+        {
+            #videoBG
+            {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @media (max-width: 767px)   
+        {
+            #videoBG
+            {
+                display: none;
+            }
+      
+            body
+            {
+                background: url('mirasimiz/poster1.png');
+                background-size: cover;
+                animation:image 70s infinite alternate;
+                -webkit-animation:image 70s infinite alternate;
+                -moz-animation:image 70s infinite alternate;
+                
+            }
+            
+            @keyframes image{
+                    0%{
+                        background:url("mirasimiz/poster1.png");
+                        background-size: cover;
+                    }
+
+                    25%{
+                        background:url("mirasimiz/poster6.png");
+                        background-size: cover;
+                    }
+
+                    50%{
+                        background:url("mirasimiz/poster7.png");
+                        background-size: cover;
+                    }
+
+                    75%{
+                        background:url("mirasimiz/poster8.png");
+                        background-size: cover;
+                    }
+
+                    100%{
+                        background:url("mirasimiz/poster9.png");
+                        background-size: cover;
+                    }
+                }
+                    .hidden
+                    {
+                        display: none;
+                    }
+                    .yemek
+                    {
+                        background: url("images/icons/utensils-solid.svg") no-repeat center center;
+                        width: 50px;
+                        height: 50px;
+
+                    }  
+                    .yapi
+                    {
+                        background: url("images/icons/landmark-solid.svg") no-repeat center center;
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .sanat
+                    {
+                        background: url("images/icons/palette-solid.svg") no-repeat center center;
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .sarki
+                    {
+                        background: url("images/icons/music-solid.svg") no-repeat center center;
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .isim
+                    {
+                        background: url("images/icons/grin-stars-regular.svg") no-repeat center center;
+                        width: 50px;
+                        height: 50px;
+                    }
+            }
+            
+        
+         
+      </style>
+      <title>SkyMoon Website</title>
+      
+  </head>
+  <body>  
+      <section>
+          <div class="container">
+              <div class="row">
+                  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                      <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="SkyMoon Website"/></a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">           
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Hakkımda<span class="sr-only">(current)</span></a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="Ozgecmis.html">Özgeçmiş</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Sehrim.html">Şehrim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Mirasimiz.html">Mirasımız</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Giris.html">Giriş</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Iletisim.html">İletişim</a>
+                            </li>               
+                        </ul>
+                      </div>
+                  </nav>
+              </div>
+              
+          </div>
+           
+          <nav class="navbar navbar-expand " style="bottom: 0; position: absolute; width: 100%; background-color: #0009 ">
+            
+          <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+            <ul class=" navbar-nav tab-menu" >
+               
+                  <li class="nav-item current">
+                    <a class="nav-link yemek" href="#tab1"><p class="hidden" style="color: aliceblue">Yemekler</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link yapi" href="#tab2"><p class="hidden" style="color: aliceblue">Tarihi Yapılar</p></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link sanat" href="#tab3"><p class="hidden" style="color: aliceblue">Sanat</p></a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link sarki" href="#tab4"><p class="hidden" style="color: aliceblue">Şarkılar</p></a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link isim" href="#tab5"><p class="hidden" style="color: aliceblue">Önemli İsimler</p></a>
+                  </li>
+                 
+                </ul>
+              </div>
+            </nav>
+       
+        <div class="tab-container">
+             <div id="tab1" class="tab-content">
+                    <video id="videoBG" poster="mirasimiz/poster1.png" autoplay muted loop >
+                          <source  src="mirasimiz/tokat_yemekleri.mp4" type="video/mp4">
+                      </video> 
+                </div>
+            <div id="tab2" class="tab-content">
+                    <video id="videoBG" poster="mirasimiz/poster1_1.png" autoplay muted loop >
+                          <source  src="mirasimiz/tokat_tarihi.mp4" type="video/mp4">
+                      </video>
+                </div>
+            <div id="tab3" class="tab-content">
+                    <video id="videoBG" poster="mirasimiz/poster1_2.png" autoplay muted loop >
+                          <source  src="mirasimiz/tokat_sanat.mp4" type="video/mp4">
+                      </video>
+                </div>
+            <div id="tab4" class="tab-content">
+                    <video id="videoBG" poster="mirasimiz/poster1_3.png" autoplay muted loop >
+                          <source  src="mirasimiz/tokat_sarki.mp4" type="video/mp4">
+                      </video>
+                </div>
+            <div id="tab5" class="tab-content">
+                    <video id="videoBG" poster="mirasimiz/poster1_4.png" autoplay muted loop >
+                          <source  src="mirasimiz/tokat_unlu.mp4" type="video/mp4">
+                      </video>
+                </div>
+        </div>
+      </section>
+      
+      <script src="js/jQuery-3.4.1.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script>
+        $(document).ready(function()
+        {
+            $(".tab-menu a").click(function(event){
+                                    event.preventDefault();
+                                    $(this).parent().addClass("current");
+                                    $(this).parent().siblings().removeClass("current");
+                                    var tab = $(this).attr("href");
+                                    $(".tab-content").not(tab).css("display", "none");
+                                    $(tab).fadeIn();
+                                   });
+        });
+      </script>
+      
+
+  </body>
+</html>
