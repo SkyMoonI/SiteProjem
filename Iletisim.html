@@ -13,7 +13,34 @@
       <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
       
         <style>
-        
+            body
+            {
+                margin: 0;
+                padding: 0;
+                animation: bgcolor infinite 20s;
+            }
+            
+        @keyframes bgcolor
+            {
+                0%{
+                    background-color: #e74c3c;
+                }
+                20%{
+                    background-color: #2980b9;
+                }
+                40%{
+                    background-color: #f1c40f;
+                }
+                60%{
+                    background-color: #8e44ad;
+                }
+                80%{
+                    background-color: #34495e;
+                }
+                100%{
+                    background-color: #e74c3c;
+                }
+            }
 
         div.polaroid {
           width: 80%;
@@ -26,6 +53,7 @@
           text-align: center;
           padding: 10px 20px;
         }
+            
         </style>
       <title>SkyMoon Website</title>
       
@@ -106,7 +134,7 @@
         </script>
   </head>
   <body>  
-      <section id="cover">
+      <section>
           <div class="container">
               <div class="row">
                   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -141,7 +169,7 @@
               </div>
               
           </div>
-          <div id="elisi-cont" class="container polaroid" style="margin-top:  150px; ">
+          <div id="elisi-cont" class="container polaroid" style="margin-top:  150px;">
               <div >
                 <form name="form" action="iletisim.php" method="POST" onsubmit="return islem(this);">
                 <div class="form-row">
