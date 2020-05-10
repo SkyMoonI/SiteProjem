@@ -28,72 +28,66 @@
               color: aliceblue !important;
               border: 1px solid #666 !important;
           }
-          #videoBG
-        {
-            background-color: black;
-            position: fixed;
-            z-index: -1;
-
-        }
+          
         @media (min-aspect-ratio: 16/9)
         {
-            #videoBG
+            #videoBG1
             {
                 width: 100%;
-                height: 100%;
+                height: 950px;
+            }
+            #videoBG2
+            {
+                width: 100%;
+                height: 950px;
+            }
+            #videoBG3
+            {
+                width: 100%;
+                height: 950px;
+            }
+            #videoBG4
+            {
+                width: 100%;
+                height: 950px;
+            }
+            #videoBG5
+            {
+                width: 100%;
+                height: 950px;
             }
         }
         @media (max-aspect-ratio: 16/9)
         {
-            #videoBG
+            #videoBG1
             {
                 width: 100%;
-                height: 100%;
+                height: 950px;
+            }
+            #videoBG2
+            {
+                width: 100%;
+                height: 950px;
+            }
+            #videoBG3
+            {
+                width: 100%;
+                height: 950px;
+            }
+            #videoBG4
+            {
+                width: 100%;
+                height: 950px;
+            }
+            #videoBG5
+            {
+                width: 100%;
+                height: 950px;
             }
         }
         @media (max-width: 767px)   
         {
-            #videoBG
-            {
-                display: none;
-            }
-      
-            body
-            {
-                background: url('mirasimiz/poster1.png');
-                background-size: cover;
-                animation:image 70s infinite alternate;
-                -webkit-animation:image 70s infinite alternate;
-                -moz-animation:image 70s infinite alternate;
-                
-            }
-            
-            @keyframes image{
-                    0%{
-                        background:url("mirasimiz/poster1.png");
-                        background-size: cover;
-                    }
-
-                    25%{
-                        background:url("mirasimiz/poster6.png");
-                        background-size: cover;
-                    }
-
-                    50%{
-                        background:url("mirasimiz/poster7.png");
-                        background-size: cover;
-                    }
-
-                    75%{
-                        background:url("mirasimiz/poster8.png");
-                        background-size: cover;
-                    }
-
-                    100%{
-                        background:url("mirasimiz/poster9.png");
-                        background-size: cover;
-                    }
-                }
+          
                     .hidden
                     {
                         display: none;
@@ -131,14 +125,160 @@
                     }
             }
             
-        
-         
+        #slider {
+           margin: 0 auto;
+           width: 1200px;
+           max-width: 100%;
+           text-align: center;
+        }
+        #slider input[type=radio] {
+           display: none;
+        }
+        #slider label {
+           cursor:pointer;
+           text-decoration: none;
+        }
+        #slides {
+           padding: 10px;
+           border: 3px solid #ccc;
+           background: #fff;
+           position: relative;
+           z-index: 1;
+        }
+        #overflow {
+           width: 100%;
+           overflow: hidden;
+        }
+        #slide1:checked ~ #slides .inner {
+           margin-left: 0;
+        }
+        #slide2:checked ~ #slides .inner {
+           margin-left: -100%;
+        }
+        #slide3:checked ~ #slides .inner {
+           margin-left: -200%;
+        }
+        #slide4:checked ~ #slides .inner {
+           margin-left: -300%;
+        }
+        #slide5:checked ~ #slides .inner {
+           margin-left: -400%;
+        }  
+        #slides .inner {
+           transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+           width: 666%;
+           line-height: 0;
+           height: 400px;
+        }
+        #slides .slide {
+           width: 15%;
+           float:left;
+           height: 100%;
+           color: #fff;
+        }
+        #slides .slide_1 {
+           background: #00171F;
+        }
+        #slides .slide_2 {
+           background: #003459;
+        }
+        #slides .slide_3 {
+           background: #007EA7;
+        }
+        #slides .slide_4 {
+           background: #00A8E8;
+        }
+        #slides .slide_5 {
+           background: #6AC3E6;
+        }  
+        .slide-content
+          {
+              line-height: normal;
+              line-height:30px;
+          }
+        #controls {
+           margin: -220px 0 0 0;
+           width: 100%;
+           height: 100px;
+           z-index: 3;
+           position: relative;
+        }
+        #controls label {
+           transition: opacity 0.2s ease-out;
+           display: none;
+           width: 50px;
+           height: 50px;
+           opacity: .4;
+        }
+        #controls label:hover {
+           opacity: 1;
+        }
+        #slide1:checked ~ #controls label:nth-child(2),
+        #slide2:checked ~ #controls label:nth-child(3),
+        #slide3:checked ~ #controls label:nth-child(4),
+        #slide4:checked ~ #controls label:nth-child(5),
+        #slide5:checked ~ #controls label:nth-child(1) {
+           background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+           float:right;
+           margin: 0 -50px 0 0;
+           display: block;
+        }
+        #slide1:checked ~ #controls label:nth-last-child(1),
+        #slide2:checked ~ #controls label:nth-last-child(5),
+        #slide3:checked ~ #controls label:nth-last-child(4),
+        #slide4:checked ~ #controls label:nth-last-child(3),
+        #slide5:checked ~ #controls label:nth-last-child(2) {
+           background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+           float:left;
+           margin: 0 0 0 -50px;
+           display: block;
+        }
+        #bullets {
+           margin: 150px 0 0;
+           text-align: center;
+        }
+        #bullets label {
+           display: inline-block;
+           width: 10px;
+           height: 10px;
+           border-radius:100%;
+           background: #ccc;
+           margin: 0 10px;
+        }
+        #slide1:checked ~ #bullets label:nth-child(1),
+        #slide2:checked ~ #bullets label:nth-child(2),
+        #slide3:checked ~ #bullets label:nth-child(3),
+        #slide4:checked ~ #bullets label:nth-child(4),
+        #slide5:checked ~ #bullets label:nth-child(5){
+           background: #444;
+        }
+        @media screen and (max-width: 2000px) {
+           #slide1:checked ~ #controls label:nth-child(2),
+           #slide2:checked ~ #controls label:nth-child(3),
+           #slide3:checked ~ #controls label:nth-child(4),
+           #slide4:checked ~ #controls label:nth-child(5),
+           #slide5:checked ~ #controls label:nth-child(1),
+           #slide1:checked ~ #controls label:nth-last-child(1),
+           #slide2:checked ~ #controls label:nth-last-child(5),
+           #slide3:checked ~ #controls label:nth-last-child(4),
+           #slide4:checked ~ #controls label:nth-last-child(3),
+           #slide5:checked ~ #controls label:nth-last-child(2) {
+              margin: 0;
+           }
+           #slides {
+              max-width: calc(100% - 140px);
+              margin: 0 auto;
+           }
+        }
+        div#video_controls_bar{ background: #333; padding:10px;}
+          input#seekslider{ width:180px; }
+          input#volumeslider{ width: 80px;}
       </style>
       <title>SkyMoon Website</title>
       
   </head>
   <body>  
-      <section>
+      <section >
           <div class="container">
               <div class="row">
                   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -174,59 +314,123 @@
               
           </div>
            
-          <nav class="navbar navbar-expand " style="bottom: 0; position: absolute; width: 100%; background-color: #0009 ">
+          <nav class="navbar navbar-expand " style="margin-top: 800px; position: absolute; width: 100%; background-color: #0009; ">
             
-          <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
-            <ul class=" navbar-nav tab-menu" >
-               
-                  <li class="nav-item current">
-                    <a class="nav-link yemek" href="#tab1"><p class="hidden" style="color: aliceblue">Yemekler</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link yapi" href="#tab2"><p class="hidden" style="color: aliceblue">Tarihi Yapılar</p></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link sanat" href="#tab3"><p class="hidden" style="color: aliceblue">Sanat</p></a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link sarki" href="#tab4"><p class="hidden" style="color: aliceblue">Şarkılar</p></a>
-                  </li>
-                <li class="nav-item">
-                    <a class="nav-link isim" href="#tab5"><p class="hidden" style="color: aliceblue">Önemli İsimler</p></a>
-                  </li>
-                 
-                </ul>
-              </div>
+              <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
+                <ul class=" navbar-nav tab-menu" >
+
+                      <li class="nav-item current">
+                        <a class="nav-link yemek" href="#tab1"><p class="hidden" style="color: aliceblue">Yemekler</p></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link yapi" href="#tab2"><p class="hidden" style="color: aliceblue">Tarihi Yapılar</p></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link sanat" href="#tab3"><p class="hidden" style="color: aliceblue">Sanat</p></a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link sarki" href="#tab4"><p class="hidden" style="color: aliceblue">Şarkılar</p></a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link isim" href="#tab5"><p class="hidden" style="color: aliceblue">Önemli İsimler</p></a>
+                      </li>
+
+                    </ul>
+                  </div>
             </nav>
        
         <div class="tab-container">
              <div id="tab1" class="tab-content">
-                    <video id="videoBG" poster="mirasimiz/poster1.png" autoplay muted loop >
-                          <source  src="mirasimiz/tokat_yemekleri.mp4" type="video/mp4">
-                      </video> 
+                    <iframe id="videoBG1" width="560" height="315" src="https://www.youtube.com/embed/ZasY7aOygr8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+            
             <div id="tab2" class="tab-content">
-                    <video id="videoBG" poster="mirasimiz/poster1_1.png" autoplay muted loop >
-                          <source  src="mirasimiz/tokat_tarihi.mp4" type="video/mp4">
-                      </video>
+                    <iframe id="videoBG2" width="560" height="315" src="https://www.youtube.com/embed/sx5KIH0Q3rk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             <div id="tab3" class="tab-content">
-                    <video id="videoBG" poster="mirasimiz/poster1_2.png" autoplay muted loop >
-                          <source  src="mirasimiz/tokat_sanat.mp4" type="video/mp4">
-                      </video>
+                    <iframe id="videoBG3" width="560" height="315" src="https://www.youtube.com/embed/znFiM2j7tpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             <div id="tab4" class="tab-content">
-                    <video id="videoBG" poster="mirasimiz/poster1_3.png" autoplay muted loop >
-                          <source  src="mirasimiz/tokat_sarki.mp4" type="video/mp4">
-                      </video>
+                   <iframe id="videoBG4" width="560" height="315" src="https://www.youtube.com/embed/9NM4pJPLTjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             <div id="tab5" class="tab-content">
-                    <video id="videoBG" poster="mirasimiz/poster1_4.png" autoplay muted loop >
-                          <source  src="mirasimiz/tokat_unlu.mp4" type="video/mp4">
-                      </video>
+                    <iframe id="videoBG5" width="560" height="315" src="https://www.youtube.com/embed/nGCJqxg2xNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
         </div>
       </section>
+       <section id="bg" style="background-color: #FFEF87 ;">
+           <hr style="border-color: #333333">
+           <div class="row">
+                <div class="col-sm-12" align="center"><h1 style="text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;">Miraslarımız</h1></div>
+               <div class="col-sm-12">
+                    <div id="slider">
+               <input type="radio" name="slider" id="slide1" checked>
+               <input type="radio" name="slider" id="slide2">
+               <input type="radio" name="slider" id="slide3">
+               <input type="radio" name="slider" id="slide4">
+               <input type="radio" name="slider" id="slide5">         
+               <div id="slides">
+                  <div id="overflow">
+                     <div class="inner">
+                        <div class="slide slide_1">
+                           <div class="slide-content">
+                              <h2 style="margin-top: 10px; font-size: 40px;">Yemekler</h2>
+                              <p style="color: aliceblue; font-size: 25px;"><i>Tokatta yenen yemeklerin neredeyse hepsi geçmişten süre gelen, miras özelliği taşıyan ve geleceğe muhakkak taşınması gereken kültürel zenginliklerdir. Yemeklerde birçok milletin izlernini taşır. Ermenileri buna örnek verebiliriz.</i></p>
+                              <a href="yemekler.html" style=" color: aliceblue;">Daha Fazlası için...</a>
+                           </div>
+                        </div>
+                        <div class="slide slide_2">
+                           <div class="slide-content">
+                              <h2>Tarihi Yapılar</h2>
+                              <p style="color: aliceblue; font-size: 24px;"><i>Tokatta başınızı nereye çevirseniz bir tarihi esere rastlarsınız. Camileri, çeşmeleri, hamamları, hanları, türbeleri, kaleleri ve birçok tarihi yapıyı bünyesinde bulunduran adeta açık hava müzesidir. Her türlü medeniyete binlerce yıldır ev sahipliği de yapar.</i></p>
+                              <a href="tarihi.html" style="  color: aliceblue;">Daha Fazlası için...</a>
+                           </div>
+                        </div>
+                        <div class="slide slide_3">
+                           <div class="slide-content">
+                              <h2>Sanat</h2>
+                              <p><i>Tokatta yöresel el sanatları en az diğer miraslar kadar önemlidir. Örnek vermek gerekirse yazmacılık, dokumacılık, bakırcılık, demircilik, ağaç oymacılığı, çömlekçilik, kuyumculuk ve nicesi.</i></p>
+                              <a href="sanat.html" style=" color: aliceblue;">Daha Fazlası için...</a>
+                           </div>
+                        </div>
+                        <div class="slide slide_4">
+                           <div class="slide-content">
+                              <h2>Şarkılar</h2>
+                              <p style="font-size: 25px;"><i>Genelde Tokat'ın türküleri yöresel ürünlerini tanıtan veya insanlarının özelliklerini anlatan hareketli müziklerdir. Ancak hey onbeşli ağıtı dışında. İnsanlar bu ağıtı hareketli bir biçimde söylese de bu ağır kurtuluş savaşına giden 15 yaşındaki çocuklara yazılmıştır.</i></p>
+                              <a href="sarki.html" style="color: aliceblue;">Daha Fazlası için...</a>
+                           </div>
+                        </div>
+                        <div class="slide slide_5">
+                           <div class="slide-content">
+                              <h2>Önemli İsimler</h2>
+                              <p style="font-size: 25px;"><i>Tokatta doğup halka mâl olan bir çok ünlü isim vardır. Gerek devlet adamlarıyla, gerek sanatçılarıyla, gerekse sporcularıyla Tokat'ın adının duyulmasında büyük bir önemleri vardır.</i></p>
+                              <a href="unlu.html" style="color: aliceblue;">Daha Fazlası için...</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="controls">
+                  <label for="slide1"></label>
+                  <label for="slide2"></label>
+                  <label for="slide3"></label>
+                  <label for="slide4"></label>
+                  <label for="slide5"></label>
+               </div>
+               <div id="bullets">
+                  <label for="slide1"></label>
+                  <label for="slide2"></label>
+                  <label for="slide3"></label>
+                  <label for="slide4"></label>
+                  <label for="slide5"></label>
+               </div>
+            </div>
+           </div>
+               </div>
+               
+           <hr style="border-color: #333333">
+      </section> 
+     
       
       <script src="js/jQuery-3.4.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
@@ -245,7 +449,34 @@
                                    });
         });
       </script>
-      
+      <script>
+        function playPause(btn,vid){
+            var vid = document.getElementById(vid);
+            if(vid.paused){
+                vid.play();
+                btn.innerHTML = "Durdur";
+            } else {
+                vid.pause();
+                btn.innerHTML = "Oynat";
+            }
+        }
+            function vidmute(btn,vid,mutebtn){
+                var vid = document.getElementById(vid);
+                var mutebtn = document.getElementById(mutebtn);
+                if(vid.muted){
+                    vid.muted = false;
+                    mutebtn.innerHTML = "Sustur";
+                } else {
+                    vid.muted = true;
+                    mutebtn.innerHTML = "Sesi Aç";
+                }
+            }
+          function setvolume(btn,vid,volumeslider){
+            var vid = document.getElementById(vid);
+            var volumeslider = document.getElementById(volumeslider);
+            vid.volume = volumeslider.value / 100;
+        }
+        </script>
 
   </body>
 </html>
